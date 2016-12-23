@@ -1,0 +1,62 @@
+.centralBlock{
+	width: 80%;
+	display: block;
+	margin:0 auto;
+}
+.central{
+	text-align: center;
+	display: block;
+}
+.newrow{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+label{
+	margin-left: 50px;
+	display: inline-block;
+	width:100px;
+	text-align: left;
+}
+input{
+	width: 100px ;
+}
+.button_menu{
+    background-color: #fff;
+    border: 1px solid black;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 20px;
+    margin: 0 auto;
+}
+.button_generic{
+ 	background-color: #fff;
+    border: 1px solid black;
+    color: black;
+    padding: 5px ;
+    text-align: center;
+    display: inline-block;
+    margin: 0 auto;
+}
+.floatright{float: right}
+#creation{
+	display: none;
+}
+#head_menu{
+	display: block;
+}
+#back_arrow{
+	display: none;
+}
+h1{
+	text-align: center;
+	font-weight: lighter;
+	font-size: 300%;
+}
+body{
+	font-family: helvetica;
+}
+div{
+	
+}

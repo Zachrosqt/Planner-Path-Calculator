@@ -1,0 +1,140 @@
+<!--TO DO:
+-Formattare la pagina in modo che sia conforme allo standard HTML5
+-Dividere la pagina in moduli caricati tramite la pagina index.php
+-Creare file diversi per gli script
+-Trovare un modo meno casereccio per la visualizzazione dinamica della pagina
+-Rendere tali le operazioni che sono bloccanti.
+ -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Path</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="style/gui.css">
+		<script src="script.js"></script>
+	</head>
+	<body>
+		<div class="centralBlock">
+			<div id="head_menu">
+				<h1>PLANNER PATH CALCULATOR</h1>
+				<div class="central">
+					<button onclick="showCreation();" class="button_menu">CREAZIONE</button>
+					<button onclick="showPath();" class="button_menu">CALCOLO</button>
+					<button onclick="showElimination();" class="button_menu">ELIMINAZIONE</button>
+				</div>
+			</div>
+			<div><div id="back_arrow"><button class="button_generic" onclick="showMenu()">MENU</button></div></div>
+			<div class="centralBlock">
+			<div id="creation">
+				<h1>CREAZIONE</h1>
+				<div>
+					<form action="primoPrototipo1.php" target="_blank" method="POST">
+						<br/>
+						<div class="centralBlock" >
+							<div class="central">
+								<label>Nome albero:</label>
+								<input type="text" name="nomeAlbero">
+							</div>
+							<div class="central">
+								<label>Depth size:</label>
+								<input type="text" name="depthSize">
+							</div>
+							<div class="central">
+								<label>Split size:</label>
+								<input type="text" name="splitSize">
+							</div>
+						</div>
+						<div>
+							<div id="node_fileds">
+		           <div class="centralBlock">
+		            <div class="newrow">Attributo nodo 1:</div>
+		           	 <div class="content">
+		                <span> 
+		                	Nome attributo nodo: <input type="text" name="nomeAttr1" value="" />
+		                </span>
+		                <span> 
+		                	Valore nodo: <input type="text" name="valAttr1" value="" />
+		                </span>
+		                <span> 
+		                	Regola : <input type="text" name="ruleNode1" value="" />
+		                </span>
+		      		   </div>
+		           </div>
+		        	</div>
+						</div>
+						<div class="centralBlock">
+							<div class="newrow">
+								<input type="button" id="more_node_fields" class='button_generic' onclick="add_attrNodo_fields();" value="AGGIUNGI" />
+							</div>
+						</div>
+						<div>
+							<div id="edge_fileds">
+		           <div class="centralBlock">
+		            <div class='label'>Attributo arco 1:</div>
+		            <div class="content">
+		                <span> 
+		                	Nome attributo arco: <input type="text" name="nomeArco1" value="" />
+		                </span>
+		                <span> 
+		                	Valore arco: <input type="text" name="valArco1" value="" />
+		                </span>
+		                <span> 
+		                	Regola: <input type="text" name="ruleEdge1" value="" />
+		                </span>
+		            </div>
+		      	   </div>
+		        	</div>
+						</div>
+						<div class="centralBlock">
+							<div class="newrow">
+								<input type="button" id="more_edge_fields" class="button_generic" onclick="add_attrArco_fields();" value="AGGIUNGI" />
+							</div>
+						</div>
+						<div class="floatright">
+							<input type="submit" name="createSubmit" class="button_generic">
+						</div>
+					</form>
+				</div>
+			</div>
+			</div>
+			<div id="elimination" style="display: none;">
+					<!--TO DO:
+					-Restituire l'elenco degli alberi presenti nel database per poterne scegliere uno;
+					-->
+				<h1>Eliminazione</h1>
+				<form action="primoPrototipo1.php" target="_blank" method="POST">
+					<div class="centralBlock">
+					<span>
+						<label>Albero da eliminare:</label>
+						<input type="text" name="deleteTree">
+					</span>
+	          <div class="newrow">
+		          <div class="floatright"> 
+		          	<input type="submit" name="deleteSubmit" class="button_generic">
+		          </div>
+		         </div>
+					</div>
+				</form>
+			</div>
+
+			<div id="path" style="display: none;">
+			<h1>Calcolo della somma del path</h1>
+			<form action="primoPrototipo1.php" method="POST" target="_blank">
+			<div class="centralBlock">
+				<label>Albero:</label>
+				<input type="text" name="loadTree">
+				<label>Nodo iniziale:</label>
+				<input type="text" name="node1">
+				<label>Nodo finale:</label>
+				<input type="text" name="node2">
+				<div class="newrow">
+     			<div class="floatright">
+      			<input type="submit" name="pathSubmit" class="button_generic">
+     	  	</div>
+     	  </div>
+	    </div>
+			</form>
+			</div>
+		</div>
+	</body>
+</html>
