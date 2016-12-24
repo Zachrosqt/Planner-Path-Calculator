@@ -1,0 +1,24 @@
+La gui presentata è solo di prototipo per cui mancano i check di controllo. Attenersi alle seguenti indicazioni per non incombere in errori
+
+CREAZIONE ALBERO
+
+Nome albero - Campo di tipo text in cui inserire il nome dell'albero
+Depth size - Campo in cui inserire il valore dell'altezza dell'albero. Valore da inserire = intero
+Split size - campo in cui inserire il numero di figli per nodo. Valore da inserire = intero
+
+Attributi nodi: Aggiungi - Tasto per aggiungere attributi
+		Nome attributo - campo in cui inserire il nome dell'alltributo. Valore da inserire = text
+		Valore nodo - campo in cui inserire il valore dell'attributo nel nodo. Valore da inserire = intero
+		Rgola - campo in cui inserire la regola a cui si deve attenere l'attributo. 
+			Al momento sono state dichiarate solo 2 regole: 0 - regola per valori random dell'attributo (campo valore non richiesto)
+									1 - regola per inserire il valore scritto in Valore nodo
+	
+CALCOLO PATH
+
+Albero - Campo di tipo text in cui inserire il nome dell'albero. Valore da inserire = text
+Nodo iniziale - Campo in cui inserire il nodo iniziale del path. Valore da inserire = intero
+Nodo finale - campo in cui inserire il nodo iniziale del path. Valore da inserire = intero	
+
+ELIMINAZIONE ALBERO
+
+Albero da eliminare - Campo di tipo text in cui inserire il nome dell'albero che si vuole eliminare. Valore da inserire = text														
